@@ -15,11 +15,11 @@ loopd:libclassloops.so
 mains:main.o libclassrec.a
 		$(cc) $(FLAG) -o mains main.o  libclassrec.a -lm
 #dynamic
-maindloop:main.o advancedClassificationLoop.o libclassloops.so
+maindloop:main.o 
 	$(cc) $(FLAGS) -o maindloop main.o ./libclassloops.so -lm
 #dynamic
 maindrec:main.o
-	$(cc) $(FLAGS) -o maindrec main.o libclassrec.so  -lm
+	$(cc) $(FLAGS) -o maindrec main.o ./libclassrec.so  -lm
 
 
 libclassrec.a:basicClassification.o advancedClassificationRecursion.o
