@@ -3,7 +3,7 @@ int main()
 {
     int m, k;
     scanf("%d %d", &k, &m);
-    printf("\nThe Armstrong numbers are:");
+    printf("The Armstrong numbers are:");
     for (int i = k; i <= m; i++)
     {
         if (isArmstrong(i) == 1)
@@ -35,6 +35,5 @@ int main()
             printf(" %d", i);
         }
     }
-    puts("\n");
     return 0;
 }
