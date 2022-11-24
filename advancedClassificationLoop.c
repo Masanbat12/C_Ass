@@ -1,23 +1,24 @@
 #include "NumClass.h"
 
-//O(log(number)) base 10
-int isPalindrome(int number)
+int isPalindrome(int num)
 {
-	int palindrome = 0;
-	int temp = number;
-	do
-		palindrome = palindrome * 10 + temp % 10;
-	while (temp /= 10);
-	return (number == palindrome) ? true : false;
+    int pali = 0;
+    int temp = num;
+    while (temp /= 10)
+        pali = pali * 10 + temp % 10;
+    if ((num == pali))
+        return 1;
+    return 0;
 }
-//O(log(number)) base 10
-int isArmstrong(int number)
+
+int isArmstrong(int num)
 {
-	int nDigits = floor(log10(number)) + 1;
-	int temp = number;
-	int armsNumber = 0;
-	do
-		armsNumber += pow(temp % 10, nDigits);
-	while (temp /= 10);
-	return (number == armsNumber) ? true : false;
+    int digits = floor(log10(num)) + 1;
+    int temp = num;
+    int arms = 0;
+    while (temp /= 10)
+        arms += pow(temp % 10, digits);
+    if (num == arms)
+        return 1;
+    return 0;
 }
