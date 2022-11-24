@@ -35,5 +35,6 @@ int main()
             printf(" %d", i);
         }
     }
+    puts("");
     return 0;
 }
