@@ -9,6 +9,7 @@ int main(){
         }
        }
 
+
     printf("\nThe Palindromes are:");
     for(int i =k; i<=m; i++ ){ 
         if( isPalindrome(i) == 1){
